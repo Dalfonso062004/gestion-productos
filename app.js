@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public'))); // Servir archivos estáticos
 
+/*
 // Middleware para conectar a DB en cada solicitud (si no está conectada)
 app.use(async (req, res, next) => {
   try {
@@ -24,6 +25,7 @@ app.use(async (req, res, next) => {
     next(error);
   }
 });
+*/
 
 // Rutas
 app.use('/api/auth', authRoutes);
